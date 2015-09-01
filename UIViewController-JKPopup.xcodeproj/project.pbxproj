@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A25620221B95628A001DCD41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A25620211B95628A001DCD41 /* main.m */; };
+		A25620251B95628A001DCD41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A25620241B95628A001DCD41 /* AppDelegate.m */; };
+		A256202D1B95628A001DCD41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A256202C1B95628A001DCD41 /* Assets.xcassets */; };
+		A25620301B95628A001DCD41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A256202E1B95628A001DCD41 /* LaunchScreen.storyboard */; };
+		A256203F1B9562BA001DCD41 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25620381B9562BA001DCD41 /* DetailViewController.m */; };
+		A25620401B9562BA001DCD41 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A25620391B9562BA001DCD41 /* DetailViewController.xib */; };
+		A25620411B9562BA001DCD41 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A256203B1B9562BA001DCD41 /* RootViewController.m */; };
+		A25620421B9562BA001DCD41 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A256203C1B9562BA001DCD41 /* RootViewController.xib */; };
+		A25620471B9562D1001DCD41 /* UIViewController+JKPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = A25620461B9562D1001DCD41 /* UIViewController+JKPopup.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A256201D1B95628A001DCD41 /* UIViewController-JKPopup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIViewController-JKPopup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A25620211B95628A001DCD41 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A25620231B95628A001DCD41 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A25620241B95628A001DCD41 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A256202C1B95628A001DCD41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A256202F1B95628A001DCD41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A25620311B95628A001DCD41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A25620371B9562BA001DCD41 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		A25620381B9562BA001DCD41 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		A25620391B9562BA001DCD41 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		A256203A1B9562BA001DCD41 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		A256203B1B9562BA001DCD41 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		A256203C1B9562BA001DCD41 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		A25620451B9562D1001DCD41 /* UIViewController+JKPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JKPopup.h"; sourceTree = "<group>"; };
+		A25620461B9562D1001DCD41 /* UIViewController+JKPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JKPopup.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A256201A1B95628A001DCD41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A25620141B95628A001DCD41 = {
+			isa = PBXGroup;
+			children = (
+				A256201F1B95628A001DCD41 /* UIViewController-JKPopup */,
+				A256201E1B95628A001DCD41 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A256201E1B95628A001DCD41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A256201D1B95628A001DCD41 /* UIViewController-JKPopup.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A256201F1B95628A001DCD41 /* UIViewController-JKPopup */ = {
+			isa = PBXGroup;
+			children = (
+				A25620441B9562C7001DCD41 /* UIViewController-JKPopup */,
+				A25620231B95628A001DCD41 /* AppDelegate.h */,
+				A25620241B95628A001DCD41 /* AppDelegate.m */,
+				A25620371B9562BA001DCD41 /* DetailViewController.h */,
+				A25620381B9562BA001DCD41 /* DetailViewController.m */,
+				A25620391B9562BA001DCD41 /* DetailViewController.xib */,
+				A256203A1B9562BA001DCD41 /* RootViewController.h */,
+				A256203B1B9562BA001DCD41 /* RootViewController.m */,
+				A256203C1B9562BA001DCD41 /* RootViewController.xib */,
+				A256202C1B95628A001DCD41 /* Assets.xcassets */,
+				A256202E1B95628A001DCD41 /* LaunchScreen.storyboard */,
+				A25620311B95628A001DCD41 /* Info.plist */,
+				A25620201B95628A001DCD41 /* Supporting Files */,
+			);
+			path = "UIViewController-JKPopup";
+			sourceTree = "<group>";
+		};
+		A25620201B95628A001DCD41 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A25620211B95628A001DCD41 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A25620441B9562C7001DCD41 /* UIViewController-JKPopup */ = {
+			isa = PBXGroup;
+			children = (
+				A25620451B9562D1001DCD41 /* UIViewController+JKPopup.h */,
+				A25620461B9562D1001DCD41 /* UIViewController+JKPopup.m */,
+			);
+			path = "UIViewController-JKPopup";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A256201C1B95628A001DCD41 /* UIViewController-JKPopup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A25620341B95628A001DCD41 /* Build configuration list for PBXNativeTarget "UIViewController-JKPopup" */;
+			buildPhases = (
+				A25620191B95628A001DCD41 /* Sources */,
+				A256201A1B95628A001DCD41 /* Frameworks */,
+				A256201B1B95628A001DCD41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UIViewController-JKPopup";
+			productName = "UIViewController-JKPopup";
+			productReference = A256201D1B95628A001DCD41 /* UIViewController-JKPopup.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A25620151B95628A001DCD41 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = www.skyfox.org;
+				TargetAttributes = {
+					A256201C1B95628A001DCD41 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = A25620181B95628A001DCD41 /* Build configuration list for PBXProject "UIViewController-JKPopup" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A25620141B95628A001DCD41;
+			productRefGroup = A256201E1B95628A001DCD41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A256201C1B95628A001DCD41 /* UIViewController-JKPopup */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A256201B1B95628A001DCD41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A25620301B95628A001DCD41 /* LaunchScreen.storyboard in Resources */,
+				A25620401B9562BA001DCD41 /* DetailViewController.xib in Resources */,
+				A25620421B9562BA001DCD41 /* RootViewController.xib in Resources */,
+				A256202D1B95628A001DCD41 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A25620191B95628A001DCD41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A25620251B95628A001DCD41 /* AppDelegate.m in Sources */,
+				A25620221B95628A001DCD41 /* main.m in Sources */,
+				A25620471B9562D1001DCD41 /* UIViewController+JKPopup.m in Sources */,
+				A25620411B9562BA001DCD41 /* RootViewController.m in Sources */,
+				A256203F1B9562BA001DCD41 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A256202E1B95628A001DCD41 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A256202F1B95628A001DCD41 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A25620321B95628A001DCD41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A25620331B95628A001DCD41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A25620351B95628A001DCD41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "UIViewController-JKPopup/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.skyfox.UIViewController-JKPopup";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A25620361B95628A001DCD41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "UIViewController-JKPopup/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.skyfox.UIViewController-JKPopup";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A25620181B95628A001DCD41 /* Build configuration list for PBXProject "UIViewController-JKPopup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A25620321B95628A001DCD41 /* Debug */,
+				A25620331B95628A001DCD41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A25620341B95628A001DCD41 /* Build configuration list for PBXNativeTarget "UIViewController-JKPopup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A25620351B95628A001DCD41 /* Debug */,
+				A25620361B95628A001DCD41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A25620151B95628A001DCD41 /* Project object */;
+}
