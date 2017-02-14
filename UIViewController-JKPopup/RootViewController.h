@@ -11,5 +11,7 @@
 @interface RootViewController : UIViewController
 - (IBAction)popupTouched:(id)sender;
 - (IBAction)popup2Touched:(id)sender;
+- (IBAction)newVCTouched:(id)sender;
 
+- (IBAction)presentTouched:(id)sender;
 @end

@@ -16,6 +16,8 @@
 		A25620411B9562BA001DCD41 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A256203B1B9562BA001DCD41 /* RootViewController.m */; };
 		A25620421B9562BA001DCD41 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A256203C1B9562BA001DCD41 /* RootViewController.xib */; };
 		A25620471B9562D1001DCD41 /* UIViewController+JKPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = A25620461B9562D1001DCD41 /* UIViewController+JKPopup.m */; };
+		B8225D0C1E52997100269BC4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8225D0A1E52997100269BC4 /* SecondViewController.m */; };
+		B8225D0D1E52997100269BC4 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8225D0B1E52997100269BC4 /* SecondViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,9 @@
 		A256203C1B9562BA001DCD41 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		A25620451B9562D1001DCD41 /* UIViewController+JKPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JKPopup.h"; sourceTree = "<group>"; };
 		A25620461B9562D1001DCD41 /* UIViewController+JKPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JKPopup.m"; sourceTree = "<group>"; };
+		B8225D091E52997100269BC4 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		B8225D0A1E52997100269BC4 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		B8225D0B1E52997100269BC4 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +80,9 @@
 				A256203A1B9562BA001DCD41 /* RootViewController.h */,
 				A256203B1B9562BA001DCD41 /* RootViewController.m */,
 				A256203C1B9562BA001DCD41 /* RootViewController.xib */,
+				B8225D091E52997100269BC4 /* SecondViewController.h */,
+				B8225D0A1E52997100269BC4 /* SecondViewController.m */,
+				B8225D0B1E52997100269BC4 /* SecondViewController.xib */,
 				A256202C1B95628A001DCD41 /* Assets.xcassets */,
 				A256202E1B95628A001DCD41 /* LaunchScreen.storyboard */,
 				A25620311B95628A001DCD41 /* Info.plist */,
@@ -161,6 +169,7 @@
 				A25620401B9562BA001DCD41 /* DetailViewController.xib in Resources */,
 				A25620421B9562BA001DCD41 /* RootViewController.xib in Resources */,
 				A256202D1B95628A001DCD41 /* Assets.xcassets in Resources */,
+				B8225D0D1E52997100269BC4 /* SecondViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8225D0C1E52997100269BC4 /* SecondViewController.m in Sources */,
 				A25620251B95628A001DCD41 /* AppDelegate.m in Sources */,
 				A25620221B95628A001DCD41 /* main.m in Sources */,
 				A25620471B9562D1001DCD41 /* UIViewController+JKPopup.m in Sources */,

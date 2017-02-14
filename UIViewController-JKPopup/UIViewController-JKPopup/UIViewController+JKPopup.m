@@ -87,8 +87,8 @@ static const void *k_pop_tag = &k_pop_tag;
     JKPopupBackgroundView *popupBackgroundView = [[JKPopupBackgroundView alloc] initWithFrame:topView.bounds];
     popupBackgroundView.tag = 123456;
     popupBackgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    popupBackgroundView.backgroundColor = [UIColor clearColor];
-    popupBackgroundView.alpha = 0.5;
+    popupBackgroundView.backgroundColor = [UIColor blackColor];
+    popupBackgroundView.alpha = 0.1;
     
     [popupBackgroundView touchesBegan:^(CGPoint point) {
         if (enable) {
@@ -104,77 +104,64 @@ static const void *k_pop_tag = &k_pop_tag;
     self.jk_popupDismissBlock = [dismissed copy];
 
     [topView addSubview:jk_popupViewController.jk_popupBackgroundView];
-    [self slideView:jk_popupViewController inView:topView isShow:YES];
+   
+    //present
+    jk_popupViewController.view.layer.cornerRadius = 12;
+    jk_popupViewController.view.layer.masksToBounds = YES;
+    jk_popupViewController.view.layer.shouldRasterize = YES;
+    jk_popupViewController.view.layer.rasterizationScale = [[UIScreen mainScreen] scale];
+    jk_popupViewController.view.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin |UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin;
+
+    jk_popupViewController.view.frame = CGRectMake((topView.frame.size.width-jk_popupViewController.view.frame.size.width)/2, topView.frame.size.height, jk_popupViewController.view.frame.size.width, jk_popupViewController.view.frame.size.height);
+    [topView addSubview:jk_popupViewController.view];
     
-    
+    [UIView animateWithDuration:kPopupModalAnimationDuration animations:^{
+        jk_popupViewController.jk_popupBackgroundView.alpha = 0.4;
+        jk_popupViewController.view.frame = CGRectMake((topView.frame.size.width-jk_popupViewController.view.frame.size.width)/2, (topView.frame.size.height-jk_popupViewController.view.frame.size.height)/2, jk_popupViewController.view.frame.size.width, jk_popupViewController.view.frame.size.height);
+        [jk_popupViewController viewWillAppear:YES];
+    } completion:^(BOOL finished) {
+        [jk_popupViewController viewDidAppear:YES];
+    }];
+
 }
 - (void)dismissJKPopupViewController:(JKPopupDismissBlock)dismissed{
-    self.jk_popupDismissBlock = [dismissed copy];
-    UIView *topView = [self topView];
-    [self slideView:self inView:topView isShow:NO];
- }
-#pragma mark Animations
--(void)slideView:(UIViewController*)popupViewController inView:(UIView*)topView isShow:(BOOL)isShow{
-    UIView *popupView  =popupViewController.view;
-    
-    popupView.layer.shadowPath = [UIBezierPath bezierPathWithRect:popupView.bounds].CGPath;
-    popupView.layer.masksToBounds = NO;
-    popupView.layer.shadowOffset = CGSizeMake(5, 5);
-    popupView.layer.shadowRadius = 5;
-    popupView.layer.shadowOpacity = 0.5;
-    popupView.layer.shouldRasterize = YES;
-    popupView.layer.rasterizationScale = [[UIScreen mainScreen] scale];
-    popupView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin |UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin;
-
-    
-    CGFloat y = (topView.frame.size.height - popupView.frame.size.height) / 2;
-    CGFloat x = (topView.frame.size.width - popupView.frame.size.width) / 2;
-
-    if (isShow)
-    {
-        [topView addSubview:popupView];
-        popupView.transform =  CGAffineTransformMakeTranslation(x,topView.frame.size.height);
-        [UIView animateWithDuration:kPopupModalAnimationDuration animations:^{
-            popupView.transform =  CGAffineTransformMakeTranslation(x,y);
-            popupViewController.jk_popupBackgroundView.alpha = 1.0f;
-            [self.jk_popupViewController viewWillAppear:NO];
-        } completion:^(BOOL finished) {
-            [self.jk_popupViewController viewDidAppear:NO];
-        }];
-        
-    }else
-    {
-        [UIView animateWithDuration:kPopupModalAnimationDuration animations:^{
-            popupView.transform =  CGAffineTransformMakeTranslation(x,topView.frame.size.height);
-//            popupView.transform =  CGAffineTransformIdentity;
-            [self viewWillDisappear:NO];
-            [self.jk_popupParentViewController viewWillAppear:NO];
-
-        } completion:^(BOOL finished) {
-            if (self.jk_popupDismissBlock)
-            {
-                self.jk_popupDismissBlock(self.jk_popTag);
-                self.jk_popupDismissBlock = nil;
-            }
+    if (self.presentingViewController) {
+        [self dismissViewControllerAnimated:YES completion:^{
             
-            if (self.jk_popupParentViewController.jk_popupDismissBlock)
-            {
-                self.jk_popupParentViewController.jk_popupDismissBlock(self.jk_popTag);
-                self.jk_popupParentViewController.jk_popupDismissBlock = nil;
-            }
-            
-            [self viewDidDisappear:NO];
-            [self.jk_popupParentViewController viewDidAppear:NO];
-            [self.jk_popupBackgroundView removeFromSuperview];
-            [self.view removeFromSuperview];
-            [self removeFromParentViewController];
-           
         }];
-
+        return;
     }
-   
-
+    self.jk_popupDismissBlock = [dismissed copy];
+    
+    [UIView animateWithDuration:kPopupModalAnimationDuration animations:^{
+        self.jk_popupBackgroundView.alpha =0;
+        CGRect rect = self.view.frame;
+        rect.origin.y =  [UIScreen mainScreen].bounds.size.height;
+        self.view.frame = rect;
+        [self viewWillDisappear:YES];
+        [self.jk_popupParentViewController viewWillAppear:YES];
+    } completion:^(BOOL finished) {
+        if (self.jk_popupDismissBlock)
+        {
+            self.jk_popupDismissBlock(self.jk_popTag);
+            self.jk_popupDismissBlock = nil;
+        }
+        
+        if (self.jk_popupParentViewController.jk_popupDismissBlock)
+        {
+            self.jk_popupParentViewController.jk_popupDismissBlock(self.jk_popTag);
+            self.jk_popupParentViewController.jk_popupDismissBlock = nil;
+        }
+        
+        [self viewDidDisappear:NO];
+        [self.jk_popupParentViewController viewDidAppear:NO];
+        [self.jk_popupBackgroundView removeFromSuperview];
+        [self.view removeFromSuperview];
+        [self removeFromParentViewController];
+        
+    }];
 }
+
 #pragma mark --
 -(UIView*)topView {
     UIViewController *viewcontroller = [self topShowViewController];
@@ -216,21 +203,21 @@ static const void *k_pop_tag = &k_pop_tag;
 -(void)touchesBegan:(void (^)(CGPoint))callback{
     _callback = [callback copy];
 }
-- (void)drawRect:(CGRect)rect
-{
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    size_t locationsCount = 2;
-    CGFloat locations[2] = {0.0f, 1.0f};
-    CGFloat colors[8] = {0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.75f};
-    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    CGGradientRef gradient = CGGradientCreateWithColorComponents(colorSpace, colors, locations, locationsCount);
-    CGColorSpaceRelease(colorSpace);
-    
-    CGPoint center = CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2);
-    float radius = MIN(self.bounds.size.width , self.bounds.size.height) ;
-    CGContextDrawRadialGradient (context, gradient, center, 0, center, radius, kCGGradientDrawsAfterEndLocation);
-    CGGradientRelease(gradient);
-}
+//- (void)drawRect:(CGRect)rect
+//{
+//    CGContextRef context = UIGraphicsGetCurrentContext();
+//    size_t locationsCount = 2;
+//    CGFloat locations[2] = {0.0f, 1.0f};
+//    CGFloat colors[8] = {0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.75f};
+//    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+//    CGGradientRef gradient = CGGradientCreateWithColorComponents(colorSpace, colors, locations, locationsCount);
+//    CGColorSpaceRelease(colorSpace);
+//    
+//    CGPoint center = CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2);
+//    float radius = MIN(self.bounds.size.width , self.bounds.size.height) ;
+//    CGContextDrawRadialGradient (context, gradient, center, 0, center, radius, kCGGradientDrawsAfterEndLocation);
+//    CGGradientRelease(gradient);
+//}
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     UITouch *touch = [touches anyObject];
